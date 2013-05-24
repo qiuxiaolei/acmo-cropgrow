@@ -3,7 +3,7 @@ package org.agmip.translators.acmo.cropgrow;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import org.agmip.acmo.translators.cropgrow.CropGrowAcmo;
+import org.agmip.acmo.translators.cropgrownau.CropGrowNAUAcmo;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,12 +17,12 @@ import org.junit.Test;
  */
 public class CropGrowAcmoTest {
 
-    CropGrowAcmo runner;
+    CropGrowNAUAcmo runner;
     URL resource;
 
     @Before
     public void setUp() throws Exception {
-        runner = new CropGrowAcmo();
+        runner = new CropGrowNAUAcmo();
         resource = this.getClass().getClassLoader().getResource("ACMO_meta.dat");
     }
 

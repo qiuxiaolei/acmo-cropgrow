@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.agmip.acmo.translators.cropgrow.core;
+package org.agmip.acmo.translators.cropgrownau.core;
 import au.com.bytecode.opencsv.CSVReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,9 +15,9 @@ import org.slf4j.LoggerFactory;
  *
  * @author qiuxiaolei
  */
-public class AcmoCropGrowOutputFileInput {
+public class AcmoCropGrowNAUOutputFileInput {
     
-    private static final Logger log = LoggerFactory.getLogger(AcmoCropGrowOutputFileInput.class);
+    private static final Logger log = LoggerFactory.getLogger(AcmoCropGrowNAUOutputFileInput.class);
     /**
      * 
      * @param sourceFolder

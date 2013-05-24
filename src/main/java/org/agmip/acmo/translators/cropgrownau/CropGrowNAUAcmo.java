@@ -2,12 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor
  */
-package org.agmip.acmo.translators.cropgrow;
+package org.agmip.acmo.translators.cropgrownau;
 import java.io.File;
 import java.util.List;
 import org.agmip.acmo.translators.AcmoTranslator;
-import org.agmip.acmo.translators.cropgrow.core.AcmoCropGrowCsvOutput;
-import org.agmip.acmo.translators.cropgrow.core.AcmoCropGrowOutputFileInput;
+import org.agmip.acmo.translators.cropgrownau.core.AcmoCropGrowNAUCsvOutput;
+import org.agmip.acmo.translators.cropgrownau.core.AcmoCropGrowNAUOutputFileInput;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 /**
@@ -15,8 +15,8 @@ import org.slf4j.LoggerFactory;
  *
  * @version 1.0.0
  */
-public class CropGrowAcmo implements AcmoTranslator {
-    private static final Logger LOG = LoggerFactory.getLogger(CropGrowAcmo.class);
+public class CropGrowNAUAcmo implements AcmoTranslator {
+    private static final Logger LOG = LoggerFactory.getLogger(CropGrowNAUAcmo.class);
     /**
      * Output ACMO csv File with WheatGrow output data
      *
@@ -28,12 +28,12 @@ public class CropGrowAcmo implements AcmoTranslator {
     public File execute(String sourceFolder, String destFolder) {
         try {
             // Read WheatGrow and RiceGrow output data
-            AcmoCropGrowOutputFileInput cropgrowReader = new AcmoCropGrowOutputFileInput();
+            AcmoCropGrowNAUOutputFileInput cropgrowReader = new AcmoCropGrowNAUOutputFileInput();
             //HashMap about acmometa and outputsummary
             List metaList = cropgrowReader.readMeta(sourceFolder);
             List summaryList = cropgrowReader.readSummary(sourceFolder);
             // Output CSV File
-            AcmoCropGrowCsvOutput csvWriter = new AcmoCropGrowCsvOutput();
+            AcmoCropGrowNAUCsvOutput csvWriter = new AcmoCropGrowNAUCsvOutput();
             csvWriter.writeFile(destFolder, metaList,summaryList);
             return csvWriter.getOutputFile();
         }catch (Exception e) {

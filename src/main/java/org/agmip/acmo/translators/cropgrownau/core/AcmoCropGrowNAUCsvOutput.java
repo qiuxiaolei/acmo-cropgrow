@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.agmip.acmo.translators.cropgrow.core;
+package org.agmip.acmo.translators.cropgrownau.core;
 
 import au.com.bytecode.opencsv.CSVWriter;
 import java.io.File;
@@ -21,9 +21,9 @@ import org.slf4j.LoggerFactory;
  *
  * @author qiuxiaolei
  */
-public class AcmoCropGrowCsvOutput {
+public class AcmoCropGrowNAUCsvOutput {
     
-    private static final Logger log = LoggerFactory.getLogger(AcmoCropGrowOutputFileInput.class);
+    private static final Logger log = LoggerFactory.getLogger(AcmoCropGrowNAUOutputFileInput.class);
     private File outputFile;
     /**
      * Generate ACMO CSV file
@@ -35,7 +35,7 @@ public class AcmoCropGrowCsvOutput {
         MetaReader metaReader = new MetaReader(metaListData);
         OutputSummaryReader summaryReader = new OutputSummaryReader(summaryListData);
         //Create output CSV File
-        outputFile = AcmoUtil.createCsvFile(outputCsvPath, "CropGrow");
+        outputFile = AcmoUtil.createCsvFile(outputCsvPath, "CropGrow-NAU");
         CSVWriter writer = new CSVWriter(new FileWriter(outputFile), ',');	
         //write Meta Header
         writer.writeAll(metaReader.getHeader());
@@ -46,7 +46,7 @@ public class AcmoCropGrowCsvOutput {
             while (writeData.size() < 39) {
                 writeData.add("");
             }
-            writeData.set(37, "CropGrow");
+            writeData.set(37, "CropGrow-NAU");
             //Model Version
             writeData.set(38, summaryReader.version);
             writeData.add(summaryReader.GetSummaryData(exname, "hwah"));

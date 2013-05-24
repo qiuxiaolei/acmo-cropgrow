@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.agmip.translators.acmo</groupId>
-  <artifactId>acmo-cropgrow</artifactId>
+  <artifactId>acmo-cropgrow-nau</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>acmo-cropgrow</name>
+  <name>acmo-cropgrow-nau</name>
   <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
