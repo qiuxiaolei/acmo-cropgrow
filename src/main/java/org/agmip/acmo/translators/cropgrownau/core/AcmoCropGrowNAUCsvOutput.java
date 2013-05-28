@@ -29,7 +29,7 @@ public class AcmoCropGrowNAUCsvOutput {
      * Generate ACMO CSV file
      *
      * @param outputCsvPath The path for output csv file
-     * @param data The data holder for model output data and meta data
+     * @param summaryListData The data holder for model output data and meta data
      */
     public void writeFile(String outputCsvPath,List metaListData,List summaryListData) throws IOException,NullPointerException,IndexOutOfBoundsException {
         MetaReader metaReader = new MetaReader(metaListData);
