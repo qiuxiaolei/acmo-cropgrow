@@ -28,10 +28,10 @@ public class CropGrowAcmoTest {
 
     @Test
     public void test() throws IOException, Exception {
-        File file = runner.execute(resource.getPath(), "");
+        File file = runner.execute(new File(resource.getPath()).getParent(), "");
         if (file != null) {
             assertTrue(file.exists());
-            assertTrue(file.getName().matches("ACMO_CropGrow( \\(\\d\\))*.csv"));
+            assertTrue(file.getName().matches("ACMO_CropGrow-NAU( \\(\\d\\))*.csv"));
             assertTrue(file.delete());
         }
     }
